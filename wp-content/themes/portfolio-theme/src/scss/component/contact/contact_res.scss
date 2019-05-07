@@ -1,0 +1,14 @@
+@media screen and (min-width:60.25em){
+  .contact_content{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 3em;
+  }
+  .contact_form{
+    width: 550px;
+  }
+  .contact_info{
+    width: 450px;
+    padding-left: 4em;
+  }
+}

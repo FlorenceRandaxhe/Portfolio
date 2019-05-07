@@ -1,0 +1,20 @@
+.about_text{
+  //max-width: 33.4375em;
+  line-height: 1.5;
+  em{
+    font-weight: 600;
+  }
+  p{
+    margin-bottom: 2em;
+  }
+  .about_link{
+    font-family: $spacemono;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+}
+
+
+.about_img img{
+  display: none;
+}

@@ -1,0 +1,25 @@
+@media screen and (min-width:60.25em) {
+
+  .project_wrapper{
+    display: flex;
+    align-items: center;
+  }
+
+  .project_img{
+    display: block;
+    width: 450px;
+  }
+
+  .project_wrapper:nth-child(3n){
+    flex-direction: row-reverse;
+  }
+
+  .project_wrapper:nth-child(3n) .project_content{
+    padding-left: 3em;
+  }
+
+  .project_wrapper:nth-child(2n) .project_content{
+    padding-right: 3em;
+  }
+
+}

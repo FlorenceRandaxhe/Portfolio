@@ -1,0 +1,33 @@
+@media screen and (min-width:31.25em){
+  .single_project_header{
+    flex-direction: row;
+    justify-content: space-between;
+    .project_header_content{
+      max-width: 445px;
+    }
+  }
+
+  .project_links ul li{
+    display: inline-block;
+    &:first-of-type{
+      margin-right: 3em;
+    }
+  }
+
+  .project_img_content{
+    padding-right: 6em;
+  }
+
+  .single_project_content{
+    margin-top: 3em;
+    display: flex;
+    flex-wrap: wrap;
+    .circle{
+      width: 6em;
+      height: 6em;
+    }
+    .circle:not(:last-of-type){
+      margin-right: 1em;
+    }
+  }
+}

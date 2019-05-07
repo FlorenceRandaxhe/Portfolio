@@ -1,0 +1,70 @@
+@media screen and (max-width:500px){
+  .menu_icon{
+    display: block;
+    position: sticky;
+    right: 20px;
+    padding: 10px;
+    background-color: $black;
+    border-radius: 100%;
+    z-index: 2;
+    svg{
+      stroke: $white;
+      stroke-width: 2px;
+    }
+  }
+
+  nav{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    transform: translateX(100vw);
+    transition: 0.3s;
+    z-index: 1;
+    .nav_list{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    li:nth-child(2){
+      padding: 4em 0;
+    }
+    a{
+      font-size: 2em;
+      color: $white;
+    }
+  }
+  #menu:checked ~ nav {
+    transform: translateX(0);
+    transition: 0.3s;
+  }
+
+  #menu:checked {
+    & ~ .menu_icon {
+      background-color: $yellow;
+      svg {
+      transition: 0.3s;
+      stroke: $black;
+      }
+    }
+  }
+
+  .hero_content {
+    padding-top: 5em;
+    .underline{
+      padding-top: 1em;
+    }
+    a{
+      font-size: 1.6em;
+    }
+    .underline{
+      font-size: 1.2em;
+    }
+  }
+}
+
+

@@ -1,0 +1,19 @@
+@import "reset/reset";
+@import "settings/settings";
+@import "generic/generic";
+@import "component/logo";
+
+@import "component/header/header";
+@import "component/footer/footer";
+@import "component/to_contact";
+@import "component/home/work";
+@import "component/contact/contact";
+@import "component/about/about";
+@import "component/project/project";
+
+@import "generic/generic_res";
+@import "component/header/header_res";
+@import "component/home/work_res";
+@import "component/contact/contact_res";
+@import "component/about/about_res";
+@import "component/project/project_res";
