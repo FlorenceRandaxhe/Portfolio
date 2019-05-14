@@ -1,6 +1,6 @@
 .header{
-  margin: 0 auto;
   width: 90%;
+  margin: 0 auto;
   max-width:90em;
   .header_wrapper{
     display: flex;
@@ -31,30 +31,27 @@
  /*********** header-home ***********/
 
   .hero_wrapper{
-    height: calc(100vh - 177px);
+    height: calc(100vh - 178px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     font-family: $spacemono;
-    background-image: url("../assets/bg.png");
-    background-repeat: no-repeat;
-    background-position:top right;
   }
 
   .hero_content {
     text-align: center;
-    padding-top: 8em;
+    margin-top: 3em;
+    p{
+      display:inline-block;
+      line-height: 1.5;
+      margin: 1.25em;
+    }
     span{
       display: block;
+      font-size: 6em;
     }
-    .underline{
-      padding-top: 1em;
-    }
-    a{
-      font-size: 4.375em;
-    }
-    .underline{
-      font-size: 2.1875em;
+    em{
+      font-size: 3em;
     }
   }
 
@@ -65,10 +62,11 @@
   .scroll_down{
     text-transform: uppercase;
     position: relative;
+    transition: 2s;
     &:before{
       position: absolute;
-      top: 10px;
-      left: 65px;
+      top: 0.625em;
+      left: 4.0625em;
       margin-left: -1px;
       height: 2px;
       background: black;
@@ -79,32 +77,19 @@
 
   @keyframes line {
     0%{
-      left: 65px;
+      left: 4.0625em;
       width: 0;
     }
     20%{
-      left: 65px;
-      width: 70px;
+      left: 4.0625em;
+      width: 6.25em;
     }
     70%{
-      left: 65px;
-      width: 70px;
+      left: 4.0625em;
+      width: 6.25em;
     }
     90%{
-      left: 135px;
+      left: 8.4375em;
       width: 0;
     }
   }
-
-  /**************************************/
-
-.hero_canvas{
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-  canvas{
-    width: 100%;
-  }
-}

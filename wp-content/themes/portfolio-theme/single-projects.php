@@ -14,12 +14,12 @@
                         <ul>
                             <li>
                                 <?php $site = get_field('website_link'); if( $site ): ?>
-                                    <a target="_blank" class="project_link_item" href="<?= $site; ?>" title="Aller sur le site web">Voir le site web</a>
+                                    <a class="project_link_item" href="<?= $site; ?>" title="<?= __('Aller sur le site web', 'fr');?>"><?= __('Voir le site web', 'fr');?></a>
                                 <?php endif; ?>
                             </li>
                             <li>
                                 <?php $github = get_field('github_link'); if( $github ): ?>
-                                    <a target="_blank" class="project_link_item" href="<?= $github; ?>" title="Aller sur le repo Github du site">Voir sur Github</a>
+                                    <a class="project_link_item" href="<?= $github; ?>" title="<?= __('Aller sur le repo Github du site', 'fr');?>"><?= __('Voir sur Github', 'fr');?></a>
                                 <?php endif; ?>
                             </li>
 
@@ -38,51 +38,63 @@
             </header>
 
             <div class="single_project_content">
+
+                <?php $gallery = get_field('project_images'); if( $gallery ): ?>
                 <div class="project_img_content">
-                    <?php $images = get_field('project_images');
-                    if( $images ): ?>
-                    <h3 aria-level="3" role="heading">Images du projet</h3>
+                    <h3 aria-level="3" role="heading"><?= __('Images du projet', 'fr');?></h3>
                     <div class="single_project_img">
                         <ul>
-                            <?php foreach( $images as $image ): ?>
+                            <?php foreach( $gallery as $image ): ?>
                                 <li class="project_img_list">
-                                    <img src="<?= $image['url']; ?>" alt="Capture d'écran du site <?php the_title(); ?>" width="<?= $width; ?>" height="<?= $height; ?>">
+                                    <img src="<?= $image['url']; ?>" alt="Capture d'écran du site <?php the_title(); ?>" width="<?= $image['width']; ?>" height="<?= $image['height']; ?>">
                                 </li>
                             <?php endforeach; ?>
                         </ul>
                     </div>
-                    <?php endif; ?>
                 </div>
+                <?php endif; ?>
 
                 <div>
+                    <?php if( have_rows('project_colors') ):?>
                     <div class="project_color_content">
-                        <h3 aria-level="3" role="heading">Couleurs</h3>
+                        <h3 aria-level="3" role="heading"><?= __('Couleurs', 'fr');?></h3>
                         <div class="project_color">
-                            <?php if( have_rows('project_colors') ): while ( have_rows('project_colors') ) : the_row(); ?>
-                                <div class="circle" style="background-color:<?php the_sub_field('color_item'); ?>"></div>
-                            <?php endwhile; else: endif; ?>
+                            <ul class="color_list">
+                        <?php while ( have_rows('project_colors') ) : the_row(); ?>
+                                <li class="color_item">
+                                    <div class="circle" style="background-color:<?php the_sub_field('color_item'); ?>"></div>
+                                    <div class="hex"><p><?php the_sub_field('hex'); ?></p></div>
+                                    <span class="hidden"><?php the_sub_field('color'); ?></span>
+                                </li>
+                        <?php endwhile;?>
+                            </ul>
                         </div>
                     </div>
+                    <?php else: endif; ?>
 
+                    <?php if( have_rows('project_typo') ):?>
                     <div class="project_typo_content">
-                        <?php if( have_rows('project_typo') ): while ( have_rows('project_typo') ) : the_row(); ?>
-                        <h3 aria-level="3" role="heading">Typographie</h3>
+                        <h3 aria-level="3" role="heading"><?= __('Typographie', 'fr');?></h3>
                         <div class="project_typo">
-                                <!-- typo -->
+                            <ul>
+                            <?php while ( have_rows('project_typo') ) : the_row();
+                                 $typo = get_sub_field('typo');?>
+                                <li>
+                                    <img src="<?= $typo['url']; ?>" alt="<?= $typo['title']; ?>" width="200" height="auto">
+                                </li>
+                             <?php endwhile;?>
+                            </ul>
                         </div>
-                        <?php endwhile; else: endif; ?>
                     </div>
+                    <?php else: endif; ?>
 
                     <div class="project_logo_content">
                         <?php
-                        $image = get_field('project_logo');
-                        $size = 'thumbnail';
-                        $width = $image['sizes'][ $size . '-width' ];
-                        $height = $image['sizes'][ $size . '-height' ];
-                        if( !empty($image) ): ?>
-                        <h3 aria-level="3" role="heading">Logo</h3>
+                        $logo = get_field('project_logo');
+                        if( !empty($logo) ): ?>
+                        <h3 aria-level="3" role="heading"><?= __('Logo', 'fr');?></h3>
                         <figure>
-                            <img src="<?php echo $image['url']; ?>" alt="Logo du site <?php the_title(); ?>" width="<?php echo $width; ?>" height="<?php echo $height; ?>">
+                            <img src="<?= $logo['url']; ?>" alt="Logo du site <?php the_title(); ?>" width="<?= $logo['width']; ?>" height="<?= $logo['height']; ?>">
                         </figure>
                         <?php endif; ?>
                     </div>

@@ -3,7 +3,7 @@
     flex-direction: row;
     justify-content: space-between;
     .project_header_content{
-      max-width: 445px;
+      max-width: 32em;
     }
   }
 
@@ -19,14 +19,14 @@
   }
 
   .single_project_content{
-    margin-top: 3em;
+    margin-top: 6em;
     display: flex;
     flex-wrap: wrap;
     .circle{
       width: 6em;
       height: 6em;
     }
-    .circle:not(:last-of-type){
+    .color_item:not(:last-of-type){
       margin-right: 1em;
     }
   }

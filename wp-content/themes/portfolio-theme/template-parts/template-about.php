@@ -19,7 +19,7 @@ get_header(); ?>
                         <?php
                         $file = get_field('about_link');  if( $file ): ?>
                         <div>
-                            <a target="_blank" href="<?php echo $file['url']; ?>" class="about_link">Télécharger mon CV</a>
+                            <a href="<?= $file['url']; ?>" class="about_link"><?= __('Télécharger mon CV', 'fr');?></a>
                         </div>
                         <?php endif; ?>
 
@@ -27,9 +27,13 @@ get_header(); ?>
 
                     <?php
                     $image = get_field('about_picture');
+                    $size = 'medium';
+                    $thumb = $image['sizes'][ $size ];
+                    $width = $image['sizes'][ $size . '-width' ];
+                    $height = $image['sizes'][ $size . '-height' ];
                     if( !empty($image) ): ?>
                     <figure class="about_img">
-                        <img src="<?php echo $image['url']; ?>" alt="Photo de moi" width="300" height="300">
+                        <img src="<?= $image['url']; ?>" alt="<?= __('Photo de Florence Randaxhe', 'fr');?>" width="<?= $width; ?>" height="<?= $height; ?>">
                     </figure>
                     <?php endif; ?>
                 </div>

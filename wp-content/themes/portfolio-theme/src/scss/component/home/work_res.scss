@@ -1,13 +1,11 @@
 @media screen and (min-width:60.25em) {
+  .project_img{
+    display: block;
+  }
 
   .project_wrapper{
     display: flex;
     align-items: center;
-  }
-
-  .project_img{
-    display: block;
-    width: 450px;
   }
 
   .project_wrapper:nth-child(3n){
@@ -22,4 +20,7 @@
     padding-right: 3em;
   }
 
+  .project_title{
+    font-size: 3em;
+  }
 }

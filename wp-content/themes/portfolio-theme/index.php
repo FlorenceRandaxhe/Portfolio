@@ -10,9 +10,9 @@ get_header();
 
     <main>
         <section class="work" id="work">
-            <div class="work_wrapper wrapper">
+            <div class="work_wrapper wrapper project_up">
 
-                <h2 aria-level="2" role="heading">Derniers projets</h2>
+                <h2 aria-level="2" role="heading"><?= __('Derniers projets', 'fr');?></h2>
 
                 <?php
                 $projects = new WP_Query([
@@ -25,7 +25,6 @@ get_header();
                 <div class="project_wrapper">
                     <div class="project_content">
                         <h3 aria-level="3" role="heading" class="project_title">
-<!--                            <span class="number">01.</span>-->
 
                             <?php the_title(); ?>
                         </h3>
@@ -34,13 +33,12 @@ get_header();
                             <?php the_excerpt(); ?>
 
                         </div>
-                        <div class="project_link"><a href="<?php the_permalink(); ?>" class="btn" title="Aller sur la page du projet">Voir
-                                le projet <span class="hidden"><?php the_title(); ?></span></a></div>
-                    </div>
+                        <div class="project_link"><a href="<?php the_permalink(); ?>" class="btn" title="Aller sur la page du projet"><?= __('Voir le projet', 'fr');?><span class="hidden"><?php the_title(); ?></span></a></div>
+                        </div>
 
                     <figure class="project_img">
                     <?php if ( has_post_thumbnail() ): ?>
-                        <img src="<?php the_post_thumbnail_url('full'); ?>" alt="Page d’accueil d’AcadExchange" width="460" height="320">
+                        <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>" width="460" height="320">
                     <?php else: ?>
                         <div class="post_noimg">
                             <img src="<?= asset_path('/src/assets/noimg.jpg'); ?>" alt="ee" width="460" height="320">
@@ -68,7 +66,7 @@ get_header();
                                     </g>
                                 </g>
                             </svg>
-                            <p class="empty">Il n'y a pas de projet à afficher actuellement !</p>
+                            <p class="empty"><?= __('Il n\'y a pas de projet à afficher actuellement !', 'fr');?></p>
                         </div>
                     </div>
                 <?php endif; ?>

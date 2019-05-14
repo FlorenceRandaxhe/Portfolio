@@ -1,0 +1,56 @@
+@keyframes shapes-up {
+  0%{
+    transform: translateY(40px);
+    fill: #72d6c7;
+  }
+  50%{
+    transform: translateY(0);
+    fill: #86a4e3;
+  }
+  100%{
+    transform: translateY(40px);
+    fill: #72d6c7;
+  }
+}
+
+@keyframes shapes-down {
+  0%{
+    transform: translateY(50px);
+  }
+  65%{
+    transform: translateY(0);
+  }
+  100%{
+    transform: translateY(50px);
+  }
+}
+
+.svg_wrapper svg{
+  position: absolute;
+  top:30vh;
+  width: 90vw;
+  max-width:90em;
+  z-index: -1;
+}
+.svg_stroke{
+  animation: shapes-down 10s ease-in-out infinite;
+  fill: none;
+  stroke-miterlimit: 10;
+  stroke-width: 3px;
+  stroke: #000;
+}
+.svg_fill{
+  animation: shapes-up 10s ease-in-out infinite;
+  stroke-miterlimit: 10;
+  stroke-width: 2px;
+  fill: #72d6c7;
+}
+
+
+@media screen and (max-width: 60em){
+  .svg_wrapper{
+    display: none;
+  }
+}
+
+

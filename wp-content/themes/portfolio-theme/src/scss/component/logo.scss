@@ -6,12 +6,18 @@ h1{
   animation: stroke-offset 3s ease-out;
   .logo_fill{
     fill:$logo;
+    transition: 0.3s ease-in-out;
   }
   .logo_outline{
     fill:none;
     stroke:$black;
-    stroke-width:2px;
+    stroke-width:3px;
   }
+}
+
+h1:hover .logo_fill{
+  transform: translateX(5px) translateY(5px);
+  transition: 0.3s ease-in-out;
 }
 
 @keyframes stroke-offset {

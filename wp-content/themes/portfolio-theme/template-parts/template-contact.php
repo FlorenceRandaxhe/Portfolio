@@ -14,7 +14,7 @@ get_header(); ?>
             <div class="contact_content">
                 <div class="contact_form">
 
-                    <?= apply_filters('the_content', '[contact-form-7 id="46" title="Contact"]'); ?>
+                    <?= apply_filters('the_content', '[contact-form-7 id="134" title="Contact"]'); ?>
 
                 </div>
 

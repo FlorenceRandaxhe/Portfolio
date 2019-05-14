@@ -1,11 +1,11 @@
 @import "reset/reset";
-@import "settings/settings";
+@import "settings/setting";
 @import "generic/generic";
 @import "component/logo";
+@import "component/svg_header";
 
 @import "component/header/header";
 @import "component/footer/footer";
-@import "component/to_contact";
 @import "component/home/work";
 @import "component/contact/contact";
 @import "component/about/about";

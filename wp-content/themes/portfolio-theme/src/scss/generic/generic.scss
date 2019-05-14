@@ -13,6 +13,10 @@ body{
   background-color: $white;
 }
 
+main{
+  min-height: 100vh;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -50,7 +54,6 @@ h2{
 }
 
 img{
-  //width: 100%;
   height: auto;
 }
 
@@ -105,4 +108,27 @@ img{
 .nav_link:hover:before, .project_link_item:hover:before, .about_link:hover:before{
   width: 105%;
   transition: 0.3s;
+}
+
+.about, .contact{
+  padding-top: 2em;
+}
+
+.content_up, .project_up, #head{
+  transition: 0.8s ease-in-out;
+}
+
+.about, .contact, .single_project, .hero_content{
+  animation: appear 0.8s ease-in-out;
+}
+
+@keyframes appear {
+  0%{
+    transform: translateY(100px);
+    opacity: 0;
+   }
+  100%{
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }

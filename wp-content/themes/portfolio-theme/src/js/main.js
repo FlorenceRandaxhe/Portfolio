@@ -1,23 +1,19 @@
-const burger = document.getElementById("burger");
-const checkbox = document.getElementById("menu");
+let scrollBtn = document.querySelector('.scroll_down');
+let hero = document.querySelector('.content_up');
+let project = document.querySelector('.project_up');
+let header = document.getElementById('head');
 
-function burgerMenu() {
-    if (checkbox.checked==true){
-        burger.style.position = "fixed";
+function scrollLine() {
+    if (window.pageYOffset > 40){
+        scrollBtn.style.opacity = "0";
+        hero.style.transform = "translateY(-200px)";
+        header.style.transform = "translateY(-200px)";
+        project.style.transform = "translateY(-200px)";
     } else {
-        burger.style.position = "sticky";
+        scrollBtn.style.opacity = "initial";
+        hero.style.transform = "none";
+        header.style.transform = "none";
+        project.style.transform = "none";
     }
 }
-window.addEventListener("scroll", burgerMenu, false);
-
-/*const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
-
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-function random(min, max) {
-    return Math.random() * (max - min) + min;
-}*/
-
-
+window.addEventListener('scroll', scrollLine);

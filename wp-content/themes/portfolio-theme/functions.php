@@ -9,7 +9,11 @@ register_nav_menu('main', 'main navigation');
 add_filter('wp_title', 'custom_wp_title');
 function custom_wp_title($title) {
     if(empty($title)) {
-        $title = 'Accueil';
+        if (get_locale() == 'en_GB') {
+            $title = 'Home';
+        } else {
+            $title = 'Accueil';
+        }
     }
     $title .= ' | ' . get_bloginfo('name');
     return trim($title);
@@ -33,38 +37,35 @@ function fr_get_page_url($templateName) {
 }
 
 
- // get menu structure as array
-	
-function portfolio_getMenu($location){
-	$menu = [];
-	$locations = get_nav_menu_locations();
+// get menu structure as array
 
-	foreach (wp_get_nav_menu_items ($locations[$location]) as $post) 
-	{
-		$item = new stdClass();
-		$item->url = $post->url;
-		$item->label = $post->title;
-		$item->children = [];	
-
-		if (!$post->menu_item_parent) {
-			$menu[$post->ID] = $item;
-		} else{
-
-			$menu[$post->nemu_item_parent]->children[$post->ID] = $item;
-		}
-	}
-	return $menu;
+function fr_getMenu($location){
+    $menu = [];
+    $locations = get_nav_menu_locations();
+    foreach (wp_get_nav_menu_items ($locations[$location]) as $post)
+    {
+        $item = new stdClass();
+        $item->url = $post->url;
+        $item->label = $post->title;
+        $item->children = [];
+        if (!$post->menu_item_parent) {
+            $menu[$post->ID] = $item;
+        } else{
+            $menu[$post->nemu_item_parent]->children[$post->ID] = $item;
+        }
+    }
+    return $menu;
 }
 
 // create a custom post
 function fr_register_post_types(){
     register_post_type('projects', [
-        'label' => 'Projects',
+        'label' => 'Projets',
         'labels' => [
-            'singular_name' => 'Project',
-            'add_new_item' => 'Add new project'
+            'singular_name' => 'Projet',
+            'add_new_item' => 'Ajouter un projet'
         ],
-        'description' => 'Add the projects on the homepage',
+        'description' => 'Ajouter un projet sur la page d\'accueil',
         'hierarchical' => true,
         'supports' => array('title', 'thumbnail', 'custom-fields', 'excerpt', 'revisions'),
         'public' => true,
@@ -76,16 +77,33 @@ function fr_register_post_types(){
 add_action('init', 'fr_register_post_types');
 
 
-// remove unused post from side-bar
+// remove unused menu from side-bar
 
 function remove_menus() {
-    remove_menu_page( 'edit.php' );   //Posts
+remove_menu_page( 'edit.php' );                    //Posts
+remove_menu_page( 'edit-comments.php' );           //Comments
 }
 
 add_action( 'admin_menu', 'remove_menus' );
 
 
-
+// path for assets
 function asset_path ($path){
     return get_template_directory_uri() . $path;
 }
+
+// remove text area on page template
+
+add_action('admin_init', 'remove_textarea');
+
+function remove_textarea() {
+    remove_post_type_support( 'page', 'editor' );
+}
+
+// Register custom translation
+
+function my_theme_setup(){
+    load_theme_textdomain( 'fr', get_template_directory() . '/lang' );
+}
+
+add_action('init', 'my_theme_setup');

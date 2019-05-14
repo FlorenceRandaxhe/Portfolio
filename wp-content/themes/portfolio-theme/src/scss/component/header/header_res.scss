@@ -1,14 +1,14 @@
 @media screen and (max-width:500px){
   .menu_icon{
     display: block;
-    position: sticky;
-    right: 20px;
-    padding: 10px;
-    background-color: $black;
+    position: static;
+    right: 1.25em;
+    padding: 0.625em;
+    background-color: $yellow;
     border-radius: 100%;
     z-index: 2;
     svg{
-      stroke: $white;
+      stroke: $black;
       stroke-width: 2px;
     }
   }
@@ -19,9 +19,9 @@
     top: 0;
     width: 100vw;
     height: 100vh;
-    background-color: #000;
+    background-color: $white;
     transform: translateX(100vw);
-    transition: 0.3s;
+    transition: 0.4s;
     z-index: 1;
     .nav_list{
       display: flex;
@@ -35,34 +35,28 @@
     }
     a{
       font-size: 2em;
-      color: $white;
+      color: #000;
     }
   }
   #menu:checked ~ nav {
     transform: translateX(0);
-    transition: 0.3s;
+    transition: 0.4s ease-in;
+  }
+  #menu:checked ~ #burger{
+    position: fixed;
   }
 
-  #menu:checked {
-    & ~ .menu_icon {
-      background-color: $yellow;
-      svg {
-      transition: 0.3s;
-      stroke: $black;
-      }
-    }
-  }
 
+  .hero_wrapper{
+    background-size: contain;
+  }
   .hero_content {
-    padding-top: 5em;
-    .underline{
-      padding-top: 1em;
+    span{
+      margin-bottom: 0.5em;
+      font-size: 3em;
     }
-    a{
-      font-size: 1.6em;
-    }
-    .underline{
-      font-size: 1.2em;
+    em{
+      font-size: 2em;
     }
   }
 }
