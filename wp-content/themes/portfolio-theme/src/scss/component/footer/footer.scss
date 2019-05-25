@@ -2,6 +2,8 @@ footer{
   background-color: $blue;
 }
 
+
+
 .footer_wrapper{
   margin: 0 auto;
   width: 90%;
@@ -22,6 +24,18 @@ footer{
   padding-bottom: 1em;
 }
 
+.credit p{
+  font-size: 0.8125em;
+  a{
+    font-weight: 600;
+    transition: 0.3s;
+    &:hover{
+      border-bottom: 2px solid $black;
+      transition: 0.3s;
+    }
+  }
+}
+
 .to_contact{
   padding-bottom: 5em;
 }
@@ -30,6 +44,14 @@ footer{
   font-family: $spacemono;
   font-size:  1.4375em; /*23px*/
   padding-bottom: 2em;
+}
+
+.social_item{
+  transition: 0.3s ease-in-out;
+}
+.social_item:hover{
+  transform: translateY(-7px);
+  transition: 0.3s ease-in-out;
 }
 
 @media screen and (min-width:31.25em){
@@ -43,4 +65,5 @@ footer{
   .to_contact_content{
     font-size: 2.5em; /*40px*/
   }
+
 }

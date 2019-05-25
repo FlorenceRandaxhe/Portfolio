@@ -19,6 +19,23 @@ function custom_wp_title($title) {
     return trim($title);
 }
 
+// Page description (meta)
+
+function custom_description() {
+    if (is_home()) {
+        $description = 'Portfolio de Florence Randaxhe, Web designer';
+    } else if (is_single()) {
+        $description = the_title() . ', projet web réalisé par Florence Randaxhe';
+    } else if (is_page_template ('template-parts/template-about.php')){
+        $description = 'Portfolio de Florence Randaxhe, Web designer. Une description à ajouter parce que je sais pas quoi mettre';
+    } else if (is_page_template ('template-parts/template-contact.php')){
+        $description = 'Portfolio de Florence Randaxhe. Vous souhaitez en savoir plus sur moi ? N\'hésitez pas à me contacter';
+    } else {
+        $description = 'Portfolio de Florence Randaxhe, Web designer';
+    }
+    return $description;
+}
+
 // page url
 
 function fr_get_page_id_from_template($templateName) {
@@ -35,7 +52,6 @@ function fr_get_page_id_from_template($templateName) {
 function fr_get_page_url($templateName) {
     return get_page_link(fr_get_page_id_from_template($templateName));
 }
-
 
 // get menu structure as array
 
@@ -87,23 +103,22 @@ remove_menu_page( 'edit-comments.php' );           //Comments
 add_action( 'admin_menu', 'remove_menus' );
 
 
-// path for assets
-function asset_path ($path){
-    return get_template_directory_uri() . $path;
+// Assets
+function asset_path ($path = ''){
+    return get_template_directory_uri() . '/public/' . trim($path, '/');
 }
 
 // remove text area on page template
 
-add_action('admin_init', 'remove_textarea');
+/*add_action('admin_init', 'remove_textarea');
 
 function remove_textarea() {
     remove_post_type_support( 'page', 'editor' );
-}
+}*/
 
 // Register custom translation
 
 function my_theme_setup(){
     load_theme_textdomain( 'fr', get_template_directory() . '/lang' );
 }
-
 add_action('init', 'my_theme_setup');

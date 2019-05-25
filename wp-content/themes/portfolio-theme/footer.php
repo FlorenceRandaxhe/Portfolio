@@ -3,11 +3,21 @@
         <?php if ( is_front_page() || is_single() ): ?>
             <div class="to_contact">
 
-                <div class="to_contact_content"><p><?= __('Vous souhaitez en savoir plus&nbsp;?', 'fr');?></p></div>
+                <div class="to_contact_content"><p><?= __('Envie d\'en savoir plus&nbsp;?', 'fr');?></p></div>
 
-                <a href="<?= fr_get_page_url('template-contact.php'); ?>" class="to_contact_link btn">Contact</a>
+                <a href="<?= fr_get_page_url('template-contact.php'); ?>" title="<?= __('Vers la page de contact', 'fr');?>" class="to_contact_link btn"><?= __('Contactez-moi', 'fr');?></a>
             </div>
         <?php else : endif; ?>
+
+        <?php if (is_page_template() ): ?>
+            <div class="to_contact">
+
+                <div class="to_contact_content"><p><?= __('Envie de voir mes projets&nbsp;?', 'fr');?></p></div>
+
+                <a href="<?= get_home_url(); ?>#work" title="<?= __('Vers mes projets', 'fr');?>" class="to_contact_link btn"><?= __('Mes projets', 'fr');?></a>
+            </div>
+        <?php else : endif; ?>
+
         <div class="footer_bottom">
             <div class="social">
                 <ul class="social_list">
@@ -48,7 +58,7 @@
                 </ul>
             </div>
             <div class="credit">
-                <p>Florence Randaxhe</p>
+                <p><?= __('Design et développement par ', 'fr');?><a class="credit_link" href="https://github.com/FlorenceRandaxhe/Portfolio">Florence Randaxhe</a></p>
             </div>
         </div>
     </div>

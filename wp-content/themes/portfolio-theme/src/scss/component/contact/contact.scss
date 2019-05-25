@@ -1,3 +1,7 @@
+.contact_form, .contact_info{
+  padding-bottom: 3em;
+}
+
 .contact_info p, .contact_label, .contact_form label{
   font-family: $spacemono;
   font-weight: 700;
@@ -8,17 +12,19 @@
   background-color: $white;
   border: 2px solid $black;
   margin:0.8em 0 2em;
+  padding: 1em 0 1em 2em;
   width: 100%;
   transition: 0.3s;
   &:focus{
     box-shadow: 5px 5px $black;
     transition: 0.3s;
+    outline: none;
+  }
+  &::placeholder{
+    font-size: 1.2em;
   }
 }
 
-.contact_form input:not(.wpcf7-submit), .contact_form textarea{
-  padding: 1em 0 1em 2em;
-}
 
 .contact_info p{
   padding: 1em 0 2em;

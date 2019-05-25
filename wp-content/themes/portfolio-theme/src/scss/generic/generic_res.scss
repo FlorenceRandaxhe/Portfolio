@@ -1,17 +1,10 @@
 @media screen and (min-width:31.25em){
-  .wrapper{
+  .wrapper, .page_title_wrapper{
+    margin: 5em auto 0;
     max-width: 65em;
   }
 
-  .about_content{
-    padding: 5em 0;
-  }
-
-  .project_wrapper{
-    padding-top:16em;
-  }
-
-  h2{
-    font-size: 4.5em; /*50px*/
+  .page_title h1, .work_wrapper h2{
+    font-size: 3em;
   }
 }

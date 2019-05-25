@@ -1,26 +1,37 @@
-@media screen and (min-width:60.25em) {
-  .project_img{
-    display: block;
-  }
-
+@media screen and (min-width:60em) {
   .project_wrapper{
-    display: flex;
+    flex-direction: row-reverse;
     align-items: center;
+    padding: 10em 0;
   }
 
   .project_wrapper:nth-child(3n){
-    flex-direction: row-reverse;
+    flex-direction: row;
   }
 
   .project_wrapper:nth-child(3n) .project_content{
-    padding-left: 3em;
+    padding-left: 4em;
   }
 
   .project_wrapper:nth-child(2n) .project_content{
-    padding-right: 3em;
+    padding-right: 4em;
   }
 
   .project_title{
-    font-size: 3em;
+    font-size: 2.75em;
+  }
+
+  .project_content{
+    max-width: 600px;
+  }
+  .project_content:before{
+    font-size: 12.5em;
+  }
+
+  .project_img {
+    margin-bottom: 0;
+    img{
+      min-width: 460px;
+    }
   }
 }

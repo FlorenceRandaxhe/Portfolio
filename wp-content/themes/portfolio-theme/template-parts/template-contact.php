@@ -9,13 +9,17 @@ get_header(); ?>
 <main>
     <section class="contact">
         <div class="contact_wrapper wrapper">
-            <h2 aria-level="2" role="heading"><?php the_title(); ?></h2>
-
+            <h2 aria-level="2" role="heading" class="hidden"><?= __('Formulaire de contact', 'fr');?></h2>
             <div class="contact_content">
                 <div class="contact_form">
 
-                    <?= apply_filters('the_content', '[contact-form-7 id="134" title="Contact"]'); ?>
 
+                    <?/*= apply_filters('the_content', '[contact-form-7 id="223" title="Contact"]'); */?>
+
+                    <?= do_shortcode( '[contact-form-7 id="223" title="Contact"]' ); ?>
+                    <div>
+                        <p class="mandatory_fields"><?= __('Les champs munis d’un * sont obligatoires', 'fr') ?></p>
+                    </div>
                 </div>
 
                 <div class="contact_info">

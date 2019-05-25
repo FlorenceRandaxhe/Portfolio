@@ -1,3 +1,10 @@
+.about_content{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3em;
+}
 .about_text{
   line-height: 1.6;
   em{
@@ -7,14 +14,17 @@
     font-size: 1.125em;
     margin-bottom: 2em;
   }
-  .about_link{
-    font-family: $spacemono;
-    text-transform: uppercase;
-    font-weight: 700;
-  }
+}
+
+.about_link{
+  font-family: $spacemono;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 .about_img img{
-  display: none;
+  border-radius: 100%;
+  width: 100%;
+  max-width: 20em;
+  margin-top: 2em;
 }
-

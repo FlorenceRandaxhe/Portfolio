@@ -1,11 +1,8 @@
-h1{
-  padding-bottom: 2em;
-}
 .header_logo{
   stroke-dasharray: 200% 0;
   animation: stroke-offset 3s ease-out;
   .logo_fill{
-    fill:$logo;
+    fill: #6ac0c0;
     transition: 0.3s ease-in-out;
   }
   .logo_outline{
@@ -15,7 +12,7 @@ h1{
   }
 }
 
-h1:hover .logo_fill{
+.header_logo:hover .logo_fill{
   transform: translateX(5px) translateY(5px);
   transition: 0.3s ease-in-out;
 }

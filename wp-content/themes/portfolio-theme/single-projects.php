@@ -4,9 +4,10 @@
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <section class="single_project">
         <div class="single_project_wrapper wrapper">
-            <header class="single_project_header">
+            <h2 aria-level="2" role="heading" class="hidden"><?= __('A propos du projet', 'fr');?></h2>
+            <div class="single_project_header">
                 <div class="project_header_content">
-                    <h2 aria-level="2" role="heading"><?php the_title(); ?></h2>
+
                     <div class="project_description">
                         <?php the_field('project_description'); ?>
                     </div>
@@ -22,20 +23,24 @@
                                     <a class="project_link_item" href="<?= $github; ?>" title="<?= __('Aller sur le repo Github du site', 'fr');?>"><?= __('Voir sur Github', 'fr');?></a>
                                 <?php endif; ?>
                             </li>
-
+                            <li>
+                                <?php $invision = get_field('invision_link'); if( $invision ): ?>
+                                    <a class="project_link_item" href="<?= $invision; ?>" title="<?= __('Voir le design sur InVision', 'fr');?>"><?= __('Voir sur InVision', 'fr');?></a>
+                                <?php endif; ?>
+                            </li>
                         </ul>
                     </div>
                 </div>
                 <figure class="project_header_img">
                     <?php if ( has_post_thumbnail() ): ?>
-                        <img src="<?php the_post_thumbnail_url('full'); ?>" alt="Logo du projet <?php the_title(); ?>" width="410" height="300">
+                        <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?= __('Logo du projet ', 'fr'); ?><?php the_title(); ?>" width="410" height="300">
                     <?php else: ?>
                         <div class="post_noimg">
-                            <img src="<?= get_template_directory_uri(); ?>./src/assets/noimg.jpg" alt="" width="410" height="300">
+                            <img src="<?= asset_path ('assets/noimg.jpg'); ?>" alt="" width="410" height="300">
                         </div>
                     <?php endif; ?>
                 </figure>
-            </header>
+            </div>
 
             <div class="single_project_content">
 
@@ -46,7 +51,7 @@
                         <ul>
                             <?php foreach( $gallery as $image ): ?>
                                 <li class="project_img_list">
-                                    <img src="<?= $image['url']; ?>" alt="Capture d'écran du site <?php the_title(); ?>" width="<?= $image['width']; ?>" height="<?= $image['height']; ?>">
+                                    <img src="<?= $image['url']; ?>" alt="<?= __('Capture d\'écran du site ', 'fr'); ?><?php the_title(); ?>" width="<?= $image['width']; ?>" height="<?= $image['height']; ?>">
                                 </li>
                             <?php endforeach; ?>
                         </ul>
@@ -54,7 +59,7 @@
                 </div>
                 <?php endif; ?>
 
-                <div>
+                <div class="side">
                     <?php if( have_rows('project_colors') ):?>
                     <div class="project_color_content">
                         <h3 aria-level="3" role="heading"><?= __('Couleurs', 'fr');?></h3>
@@ -64,7 +69,6 @@
                                 <li class="color_item">
                                     <div class="circle" style="background-color:<?php the_sub_field('color_item'); ?>"></div>
                                     <div class="hex"><p><?php the_sub_field('hex'); ?></p></div>
-                                    <span class="hidden"><?php the_sub_field('color'); ?></span>
                                 </li>
                         <?php endwhile;?>
                             </ul>

@@ -1,32 +1,36 @@
 .single_project_header{
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: center;
 }
 .single_project img{
   max-width: 100%;
 }
 .project_description{
-  line-height: 1.8;
-  padding: 2em 0;
-  font-size: 1.125em;
+  line-height: 1.6;
+  padding-top: 3em;
 }
 
 .project_links li{
-    margin-bottom: 2em;
+  margin: 2em 2em 2em 0;
   }
   .project_link_item{
     font-family: $spacemono;
     font-weight: 700;
     text-transform: uppercase;
+    font-size: 0.875em;
   }
 
 .single_project_content{
-  padding:3em 0 6em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding:1em 0 6em;
+
   h3{
-    font-size: 1.25em; /*20px*/
+    font-size: 1.25em;
     font-weight: 700;
-    padding: 2.5em 0 1.5em;
+    padding: 3em 0 1em;
   }
 }
 
@@ -56,5 +60,5 @@
 }
 
 .project_typo ul li{
-  padding: 0.8em 0.5em;
+  padding: 0.8em 0.25em;
 }

@@ -9,12 +9,11 @@ get_header(); ?>
     <main>
         <section class="about">
             <div class="about_wrapper wrapper">
-                <h2 aria-level="2" role="heading"><?php the_title(); ?></h2>
+                <h2 aria-level="2" role="heading" class="hidden"><?= __('Quelques mots sur moi', 'fr');?></h2>
                 <div class="about_content">
                     <div class="about_text">
-                        <p>
-                            <?php the_field('about_content'); ?>
-                        </p>
+
+                        <?php the_field('about_content'); ?>
 
                         <?php
                         $file = get_field('about_link');  if( $file ): ?>

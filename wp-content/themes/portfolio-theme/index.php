@@ -7,7 +7,6 @@
 get_header();
 
 ?>
-
     <main>
         <section class="work" id="work">
             <div class="work_wrapper wrapper project_up">
@@ -23,6 +22,18 @@ get_header();
                 if ($projects->have_posts()) : while ($projects->have_posts()) : $projects->the_post(); ?>
 
                 <div class="project_wrapper">
+                    <figure class="project_img">
+                        <?php if ( has_post_thumbnail() ): ?>
+                            <a href="<?php the_permalink(); ?>" title="<?= __('Aller sur la page du projet', 'fr'); ?>">
+                                <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>" width="460" height="320">
+                            </a>
+                        <?php else: ?>
+                            <div class="post_noimg">
+                                <img src="<?= asset_path('/src/assets/noimg.jpg'); ?>" alt="ee" width="460" height="320">
+                            </div>
+                        <?php endif; ?>
+                    </figure>
+
                     <div class="project_content">
                         <h3 aria-level="3" role="heading" class="project_title">
 
@@ -33,18 +44,13 @@ get_header();
                             <?php the_excerpt(); ?>
 
                         </div>
-                        <div class="project_link"><a href="<?php the_permalink(); ?>" class="btn" title="Aller sur la page du projet"><?= __('Voir le projet', 'fr');?><span class="hidden"><?php the_title(); ?></span></a></div>
+                        <div class="project_link">
+                            <a href="<?php the_permalink(); ?>" class="btn" title="<?= __('Aller sur la page du projet', 'fr'); ?>">
+                                <?= __('Voir le projet', 'fr');?>
+                                <span class="hidden"><?php the_title(); ?></span>
+                            </a>
                         </div>
-
-                    <figure class="project_img">
-                    <?php if ( has_post_thumbnail() ): ?>
-                        <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>" width="460" height="320">
-                    <?php else: ?>
-                        <div class="post_noimg">
-                            <img src="<?= asset_path('/src/assets/noimg.jpg'); ?>" alt="ee" width="460" height="320">
-                        </div>
-                    <?php endif; ?>
-                    </figure>
+                    </div>
                 </div>
 
                 <?php endwhile; else: ?>

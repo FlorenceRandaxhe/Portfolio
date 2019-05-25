@@ -1,9 +1,7 @@
 @media screen and (min-width:60em){
   .about_content{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding:5em 4em 7em 0;
+    flex-direction: row;
+    padding:0 4em 0 0;
     background-image: url("../assets/bg-profile.png");
     background-repeat:no-repeat ;
     background-position:100% 20%;
@@ -12,10 +10,5 @@
     width: 33.4375em;
     padding-right: 2em;
   }
-  .about_img img{
-    display: block;
-    border-radius: 100%;
-    width: 100%;
-    max-width: 20em;
-  }
+
 }
