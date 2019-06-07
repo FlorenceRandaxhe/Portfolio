@@ -1,7 +1,6 @@
 @media screen and (min-width:60em) {
   .project_wrapper{
     flex-direction: row-reverse;
-    align-items: center;
     padding: 10em 0;
   }
 
@@ -22,16 +21,13 @@
   }
 
   .project_content{
-    max-width: 600px;
-  }
-  .project_content:before{
-    font-size: 12.5em;
+    max-width: 37.5em;
   }
 
   .project_img {
     margin-bottom: 0;
     img{
-      min-width: 460px;
+      min-width: 28.75em;
     }
   }
 }

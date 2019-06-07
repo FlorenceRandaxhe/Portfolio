@@ -1,4 +1,4 @@
-@media screen and (min-width:800px){
+@media screen and (min-width:50em){
   .project_description{
     line-height: 1.6;
     font-size: 1.125em;
@@ -17,7 +17,8 @@
   }
 }
 
-@media screen and (min-width: 1100px){
+
+@media screen and (min-width: 63.75em){
   .single_project_header{
     flex-direction: row;
   }
@@ -26,12 +27,11 @@
     padding-right: 2em;
   }
 
-  .single_project_content{
+  .single_project_content {
+    display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: flex-start;
+    padding: 6em 0;
   }
-
-
-
 }

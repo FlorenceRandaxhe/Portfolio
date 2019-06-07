@@ -27,7 +27,6 @@
   max-width: 37.5em;
 }
 
-
 .project_wrapper:nth-child(3n) .project_link {
   text-align: right;
 }
@@ -55,17 +54,18 @@
 }
 .project_content{
   position: relative;
-  max-width: 500px;
+  max-width: 31.25em;
 }
 .project_content:before{
   counter-increment: project;
   content: '0'counter(project);
   font-family: $spacemono;
   font-weight: 700;
-  font-size: 9em;
+  font-size: 10em;
   position: absolute;
   opacity: 0.2;
   top: -0.5em;
 }
+
 
 

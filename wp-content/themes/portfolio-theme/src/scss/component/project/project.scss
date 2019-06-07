@@ -3,9 +3,11 @@
   flex-direction: column-reverse;
   align-items: center;
 }
-.single_project img{
+
+.project_header_img img{
   max-width: 100%;
 }
+
 .project_description{
   line-height: 1.6;
   padding-top: 3em;
@@ -21,12 +23,12 @@
     font-size: 0.875em;
   }
 
+
 .single_project_content{
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding:1em 0 6em;
-
+  padding-bottom: 3em;
   h3{
     font-size: 1.25em;
     font-weight: 700;
@@ -34,8 +36,14 @@
   }
 }
 
+.single_project_img {
+ margin: 0 auto;
+}
 .project_img_list img{
-  padding: 0.5em 0;
+  padding: 0.5em;
+  width: 450px;
+  max-width: 100%;
+  height: auto;
 }
 
 .color_list{
@@ -62,3 +70,4 @@
 .project_typo ul li{
   padding: 0.8em 0.25em;
 }
+

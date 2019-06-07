@@ -8,23 +8,26 @@
   line-height: 1.5;
 }
 
-.contact_form input:not(.wpcf7-submit), .contact_form textarea{
+.contact_form input:not(.submit_btn), .contact_form textarea{
   background-color: $white;
   border: 2px solid $black;
   margin:0.8em 0 2em;
-  padding: 1em 0 1em 2em;
+  padding: 0.8em 0 0.8em 2em;
   width: 100%;
   transition: 0.3s;
+  font-size: 1em;
+  font-family: $worksans;
   &:focus{
     box-shadow: 5px 5px $black;
     transition: 0.3s;
     outline: none;
   }
-  &::placeholder{
-    font-size: 1.2em;
-  }
 }
 
+.mandatory_fields{
+  font-family: $spacemono;
+  padding-top:2em;
+}
 
 .contact_info p{
   padding: 1em 0 2em;
@@ -36,12 +39,12 @@
   padding: 1.5em 0 0.8em;
 }
 
-.contact_form p:last-of-type{
+.contact_form form p:last-of-type{
   text-align: right;
   padding-top: 1em;
 }
 
-.contact_form p:last-of-type input{
+.contact_form .submit_btn{
   font-family: $spacemono;
   font-weight: 700;
   font-size: 1em;
@@ -61,4 +64,16 @@
     color: $white;
     transition: 0.2s;
   }
+}
+
+.screen-reader-response{
+  font-family: $spacemono;
+  font-weight: 600;
+  padding: 1em 0;
+  line-height: 1.5;
+}
+
+.wpcf7-response-output{
+  position: absolute;
+  top: -99999px;
 }

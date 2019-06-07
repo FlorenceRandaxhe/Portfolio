@@ -17,9 +17,6 @@
 @import "component/contact/contact_res";
 @import "component/about/about_res";
 @import "component/project/project_res";
-@import "component/no_page";
+@import "component/error";
 
-header{
-  display: flex;
-  flex-direction: column-reverse;
-}
+

@@ -1,13 +1,11 @@
 <?php get_header(); ?>
-
 <main>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <section class="single_project">
         <div class="single_project_wrapper wrapper">
-            <h2 aria-level="2" role="heading" class="hidden"><?= __('A propos du projet', 'fr');?></h2>
+            <h2 aria-level="2" role="heading" class="hidden"><?= __('&Agrave; propos du projet', 'fr');?></h2>
             <div class="single_project_header">
                 <div class="project_header_content">
-
                     <div class="project_description">
                         <?php the_field('project_description'); ?>
                     </div>
@@ -41,25 +39,22 @@
                     <?php endif; ?>
                 </figure>
             </div>
-
             <div class="single_project_content">
-
-                <?php $gallery = get_field('project_images'); if( $gallery ): ?>
-                <div class="project_img_content">
+                <?php $gallery = get_field('project_images'); if( $gallery ):?>
+                    <div class="project_img_content">
                     <h3 aria-level="3" role="heading"><?= __('Images du projet', 'fr');?></h3>
                     <div class="single_project_img">
                         <ul>
-                            <?php foreach( $gallery as $image ): ?>
+                            <?php foreach( $gallery as $image ):?>
                                 <li class="project_img_list">
-                                    <img src="<?= $image['url']; ?>" alt="<?= __('Capture d\'écran du site ', 'fr'); ?><?php the_title(); ?>" width="<?= $image['width']; ?>" height="<?= $image['height']; ?>">
+                                    <img src="<?= $image['url']; ?>" alt="<?= $image['alt']; ?>" width="<?= $image['width']; ?>" height="<?= $image['height']; ?>">
                                 </li>
                             <?php endforeach; ?>
                         </ul>
                     </div>
                 </div>
                 <?php endif; ?>
-
-                <div class="side">
+                <div class="project_components">
                     <?php if( have_rows('project_colors') ):?>
                     <div class="project_color_content">
                         <h3 aria-level="3" role="heading"><?= __('Couleurs', 'fr');?></h3>
@@ -75,7 +70,6 @@
                         </div>
                     </div>
                     <?php else: endif; ?>
-
                     <?php if( have_rows('project_typo') ):?>
                     <div class="project_typo_content">
                         <h3 aria-level="3" role="heading"><?= __('Typographie', 'fr');?></h3>
@@ -91,7 +85,6 @@
                         </div>
                     </div>
                     <?php else: endif; ?>
-
                     <div class="project_logo_content">
                         <?php
                         $logo = get_field('project_logo');
@@ -108,5 +101,4 @@
     </section>
 <?php endwhile; endif; ?>
 </main>
-
 <?php get_footer(); ?>

@@ -1,7 +1,7 @@
-.header_wrapper, .hero, .svg_wrapper{
+.header_wrapper, .hero{
   width: 90%;
   margin: 0 auto;
-  max-width:90em;
+  max-width:65em;
 }
 .header_wrapper{
   display: flex;
@@ -38,7 +38,6 @@
   text-align: center;
   margin-top: 3em;
   p{
-    display:inline-block;
     line-height: 1.5;
     margin: 1.25em;
   }
@@ -85,7 +84,7 @@
     width: 6.25em;
   }
   90%{
-    left: 8.4375em;
+    left: 10em;
     width: 0;
   }
 }

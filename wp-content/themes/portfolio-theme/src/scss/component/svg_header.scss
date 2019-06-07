@@ -5,7 +5,7 @@
   }
   50%{
     transform: translateY(0);
-    fill: #86a4e3;
+    fill: #45cabe;
   }
   100%{
     transform: translateY(40px);
@@ -25,19 +25,23 @@
   }
 }
 
+.svg_wrapper{
+  width: 90%;
+  margin: 0 auto;
+}
+
 .svg_wrapper svg{
   position: absolute;
-  top:30vh;
+  top:32vh;
   width: 90vw;
-  max-width:90em;
   z-index: -1;
 }
 .svg_stroke{
   animation: shapes-down 10s ease-in-out infinite;
   fill: none;
   stroke-miterlimit: 10;
-  stroke-width: 3px;
-  stroke: #000;
+  stroke-width: 2px;
+  stroke: #242424;
 }
 .svg_fill{
   animation: shapes-up 10s ease-in-out infinite;
@@ -46,9 +50,8 @@
   fill: #72d6c7;
 }
 
-
-@media screen and (max-width: 60em){
-  .svg_wrapper{
+@media screen and (max-width: 80em){
+  .svg_wrapper svg{
     display: none;
   }
 }
