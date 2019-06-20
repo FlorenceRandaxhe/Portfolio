@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: fr\n"
-"POT-Creation-Date: 2019-05-25 11:53+0200\n"
-"PO-Revision-Date: 2019-05-25 11:53+0200\n"
+"POT-Creation-Date: 2019-06-12 14:31+0200\n"
+"PO-Revision-Date: 2019-06-12 14:34+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_GB\n"
@@ -16,150 +16,164 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: node_modules\n"
 
-#: 404.php:16
+#: 404.php:12
 msgid "Page introuvable&nbsp;!"
 msgstr "Page not found&nbsp;!"
 
-#: 404.php:29
+#: 404.php:17
 msgid "Erreur 404."
 msgstr "Error 404."
 
-#: 404.php:32
+#: 404.php:19
 msgid "La page que vous recherchez semble introuvable."
 msgstr "The page you are looking for can not be found."
 
-#: 404.php:34
+#: 404.php:20
 msgid "Allez voir les projets"
 msgstr "View the projects"
 
-#: footer.php:6
+#: footer.php:5
 msgid "Envie d'en savoir plus&nbsp;?"
 msgstr "Want to know more&nbsp;?"
 
-#: footer.php:8
+#: footer.php:6
 msgid "Vers la page de contact"
 msgstr "To the contact page"
 
-#: footer.php:8
+#: footer.php:6
 msgid "Contactez-moi"
 msgstr "Contact-me"
 
-#: footer.php:15
-msgid "Envie de voir mes projets&nbsp;?"
-msgstr "Want to see my projects&nbsp;?"
+#: footer.php:11
+msgid "Envie d'en voir plus&nbsp;?"
+msgstr "Want to see more&nbsp;?"
 
-#: footer.php:17
+#: footer.php:12
 msgid "Vers mes projets"
 msgstr "To my projects"
 
-#: footer.php:17
+#: footer.php:12
 msgid "Mes projets"
 msgstr "My projects"
 
-#: footer.php:25 footer.php:31
+#: footer.php:19 footer.php:21
 msgid "Aller sur mon Github"
 msgstr "To my Github"
 
-#: footer.php:35 footer.php:43
+#: footer.php:25 footer.php:29
 msgid "Aller sur mon LinkedIn"
 msgstr "To my LinkedIn"
 
-#: footer.php:47 footer.php:55
+#: footer.php:33 footer.php:37
 msgid "Aller sur mon Facebook"
 msgstr "To my Facebook"
 
-#: footer.php:61
+#: footer.php:43
 msgid "Design et développement par "
 msgstr "Design and development by "
 
-#: header.php:86
+#: header.php:58
 msgid "Navigation principale"
 msgstr "Main navigation"
 
-#: index.php:14
+#: index.php:10
 msgid "Derniers projets"
 msgstr "Latest projects"
 
-#: index.php:27 index.php:48
+#: index.php:21 index.php:38
 msgid "Aller sur la page du projet"
 msgstr "View page project"
 
-#: index.php:49
+#: index.php:39
 msgid "Voir le projet"
 msgstr "View project"
 
-#: index.php:75
+#: index.php:51
 msgid "Il n'y a pas de projet à afficher actuellement !"
 msgstr "There are no projects to see now&nbsp;!"
 
-#: single-projects.php:7
-msgid "A propos du projet"
+#: single-projects.php:6
+msgid "&Agrave; propos du projet"
 msgstr "About the project"
 
-#: single-projects.php:18
+#: single-projects.php:16
 msgid "Aller sur le site web"
 msgstr "View website"
 
-#: single-projects.php:18
+#: single-projects.php:16
 msgid "Voir le site web"
 msgstr "View website"
 
-#: single-projects.php:23
+#: single-projects.php:21
 msgid "Aller sur le repo Github du site"
 msgstr "View Github repository"
 
-#: single-projects.php:23
+#: single-projects.php:21
 msgid "Voir sur Github"
 msgstr "View on Github"
 
-#: single-projects.php:28
+#: single-projects.php:26
 msgid "Voir le design sur InVision"
 msgstr "View design on InVision"
 
-#: single-projects.php:28
+#: single-projects.php:26
 msgid "Voir sur InVision"
 msgstr "View on InVision"
 
-#: single-projects.php:36
+#: single-projects.php:34
 msgid "Logo du projet "
 msgstr "Project logo"
 
-#: single-projects.php:49
+#: single-projects.php:45
 msgid "Images du projet"
 msgstr "Project images"
 
-#: single-projects.php:54
-msgid "Capture d'écran du site "
-msgstr "Website screenshot"
-
-#: single-projects.php:65
+#: single-projects.php:60
 msgid "Couleurs"
 msgstr "Colours"
 
-#: single-projects.php:81
+#: single-projects.php:75
 msgid "Typographie"
 msgstr "Typography"
 
-#: single-projects.php:99
+#: single-projects.php:92
 msgid "Logo"
 msgstr "Logo"
 
-#: template-parts/template-about.php:12
+#: template-parts/template-about.php:9
 msgid "Quelques mots sur moi"
 msgstr "A little bit about me"
 
-#: template-parts/template-about.php:21
+#: template-parts/template-about.php:15
 msgid "Télécharger mon CV"
 msgstr "Download my resume"
 
-#: template-parts/template-about.php:35
+#: template-parts/template-about.php:23
 msgid "Photo de Florence Randaxhe"
 msgstr "Picture of Florence Randaxhe"
 
-#: template-parts/template-contact.php:12
+#: template-parts/template-contact.php:9
 msgid "Formulaire de contact"
 msgstr "Contact form"
 
-#: template-parts/template-contact.php:21
+#: template-parts/template-contact.php:13
 msgid "Les champs munis d’un * sont obligatoires"
 msgstr "Fields marked with * are required"
+
+#: template-parts/template-contact.php:19
+msgid "E-mail"
+msgstr "Email"
+
+#: template-parts/template-contact.php:23
+msgid "Téléphone"
+msgstr "Phone"
+
+#: template-parts/template-contact.php:27
+msgid "Adresse"
+msgstr "Address"
+
+#~ msgid "Envie de voir mes projets&nbsp;?"
+#~ msgstr "Want to see my projects&nbsp;?"
+
+#~ msgid "Capture d'écran du site "
+#~ msgstr "Website screenshot"

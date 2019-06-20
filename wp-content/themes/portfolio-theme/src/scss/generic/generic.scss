@@ -47,12 +47,13 @@ h1, h2, h3, h4, h5{
   font-size: 1.8em;
   display: inline-block;
   position: relative;
+  padding-top: 1em;
   &:before{
     content: "";
     position: absolute;
     width: 100%;
     left: 0;
-    top: 0.6em;
+    top: 1.6em;
     border-bottom:0.6em solid $yellow ;
     z-index: -1;
   }

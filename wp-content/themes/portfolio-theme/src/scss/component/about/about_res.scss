@@ -1,14 +1,15 @@
 @media screen and (min-width:60em){
   .about_content{
     flex-direction: row;
-    padding:0 4em 0 0;
+    padding:4em 4em 0 0;
     background-image: url("../assets/bg-profile.png");
     background-repeat:no-repeat ;
-    background-position:100% 20%;
+    background-position:100% 30%;
   }
   .about_text{
+    font-size: 1.1111111111111112em;
     width: 33.4375em;
-    padding-right: 2em;
+    padding-right: 3em;
   }
 
 }

@@ -15,17 +15,22 @@ get_header(); ?>
                 <div class="contact_info">
                     <?php the_field('contact_intro'); ?>
                     <ul class="contact_list">
-                        <?php if( have_rows('contact_info') ): while ( have_rows('contact_info') ) : the_row(); ?>
                         <li class="contact_item">
-                            <span class="contact_label"><?= the_sub_field('contact_info_label'); ?></span>
-                            <?= the_sub_field('contact_info_content'); ?>
+                            <span class="contact_label"><?= __('E-mail', 'fr') ?></span>
+                            <span itemprop="email"><?= the_field('mail'); ?></span>
                         </li>
-                        <?php endwhile; else : endif; ?>
+                        <li class="contact_item">
+                            <span class="contact_label"><?= __('Téléphone', 'fr') ?></span>
+                            <span itemprop="telephone"><?= the_field('phone'); ?></span>
+                        </li>
+                        <li class="contact_item">
+                            <span class="contact_label"><?= __('Adresse', 'fr') ?></span>
+                            <span itemprop="address"><?= the_field('adresse'); ?></span>
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 </main>
-
 <?php get_footer(); ?>
