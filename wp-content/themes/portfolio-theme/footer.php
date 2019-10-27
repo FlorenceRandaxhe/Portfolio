@@ -45,4 +45,13 @@
         </div>
     </div>
 </footer>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init({
+        offset:120,
+        duration:700,
+        easing: 'ease-in-out',
+        once: true,
+        });
+</script>
 </body>

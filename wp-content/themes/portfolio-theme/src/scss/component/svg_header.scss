@@ -1,18 +1,14 @@
 @keyframes shapes-up {
   0%{
     transform: translateY(40px);
-    fill: #72d6c7;
   }
   50%{
     transform: translateY(0);
-    fill: #45cabe;
   }
   100%{
     transform: translateY(40px);
-    fill: #72d6c7;
   }
 }
-
 @keyframes shapes-down {
   0%{
     transform: translateY(50px);
@@ -24,36 +20,99 @@
     transform: translateY(50px);
   }
 }
-
-.svg_wrapper{
-  width: 90%;
-  margin: 0 auto;
+@keyframes gradient {
+  0%{
+    fill: #72d6c7;
+  }
+  30%{
+    fill: #31dcdd;
+  }
+  60%{
+    fill: #70D1DD;
+  }
+  100%{
+    fill: #72d6c7;
+  }
 }
 
 .svg_wrapper svg{
   position: absolute;
-  top:32vh;
-  width: 90vw;
   z-index: -1;
 }
-.svg_stroke{
+// center
+.center_circles{
+  animation: shapes-up 7s ease-in-out infinite;
+  top: 70vh;
+  left: 35vw;
+}
+.center_circle{
+  animation: shapes-up 10s ease-in-out infinite;
+  top: 50vh;
+  left: 45vw;
+}
+.center_squares{
+  animation: shapes-down 6s ease-in-out infinite;
+  top: 90vh;
+  left: 60vw;
+}
+.center_cross{
   animation: shapes-down 10s ease-in-out infinite;
+  top: 70vh;
+  left: 75vw;
+}
+// left
+.left_circle{
+  animation: shapes-up 10s ease-in-out infinite;
+  top: 90vh;
+  left: 25vw;
+}
+.left_half_circle{
+  animation: shapes-down 10s ease-in-out infinite;
+  top: 80vh;
+  left: 10vw;
+}
+.left_polygone{
+  animation: shapes-up 6s ease-in-out infinite;
+  top: 50vh;
+  left: 2vw;
+}
+.left_tube{
+  animation: shapes-down 8s ease-in-out infinite;
+  left: 8vw;
+  top: 25vh;
+}
+// right
+.right_triangles{
+  animation: shapes-down 10s ease-in-out infinite;
+  left: 90vw;
+}
+.right_cross{
+  animation:shapes-down 7s ease-in infinite;
+  top: 90vh;
+  right: 10vw;
+}
+.right_circle{
+  animation: shapes-up 5s ease-in-out infinite;
+  top: 55vh;
+  right: 7vw;
+}
+
+.svg_stroke{
   fill: none;
   stroke-miterlimit: 10;
   stroke-width: 2px;
   stroke: #242424;
 }
 .svg_fill{
-  animation: shapes-up 10s ease-in-out infinite;
   stroke-miterlimit: 10;
   stroke-width: 2px;
   fill: #72d6c7;
+  animation: gradient 10s ease-in-out infinite;
 }
 
-@media screen and (max-width: 80em){
-  .svg_wrapper svg{
-    display: none;
+.sticky_svg{
+  display: none;
+  @include mq ('tablet-small'){
+    display: block;
   }
 }
-
-

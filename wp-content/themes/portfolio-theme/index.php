@@ -15,7 +15,7 @@ get_header();
                 'order_by'=>'date'
                 ]);
                 if ($projects->have_posts()) : while ($projects->have_posts()) : $projects->the_post(); ?>
-                <article class="project_wrapper" itemscope itemtype="http://schema.org/Product">
+                <section class="project_wrapper" itemscope itemtype="http://schema.org/Product" data-aos="fade-up">
                     <figure class="project_img"  itemprop="image">
                         <?php if ( has_post_thumbnail() ): ?>
                             <a href="<?php the_permalink(); ?>" title="<?= __('Aller sur la page du projet', 'fr'); ?>">
@@ -41,7 +41,7 @@ get_header();
                             </a>
                         </div>
                     </div>
-                </article>
+                </section>
                 <?php endwhile; else: ?>
                     <div class="noproject">
                         <div class="noproject_wrapper">

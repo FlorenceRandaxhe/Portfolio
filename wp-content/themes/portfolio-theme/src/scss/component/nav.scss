@@ -1,0 +1,46 @@
+#menu{
+  display: none;
+}
+.menu_icon{
+  display: none;
+}
+
+.nav_list {
+  display: flex;
+}
+.nav_item{
+  padding:0 2em;
+}
+.nav_link{
+  font-family: $spacemono;
+  text-transform: uppercase;
+}
+
+.nav_link, .project_link_item, .about_link{
+  position: relative;
+  outline: none;
+}
+
+.nav_link:before, .project_link_item:before, .about_link:before{
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: -3px;
+  left: -3px;
+  height: 0.625em;
+  z-index: -1;
+  background-color: $yellow;
+  transform: scaleX(0);
+  visibility: hidden;
+  transform-origin: right;
+  transition: .3s transform ease-in-out,visibility 0s .3s;
+}
+
+.nav_link:hover:before, .project_link_item:hover:before, .about_link:hover:before,
+.nav_link:focus:before, .project_link_item:focus:before, .about_link:focus:before{
+  transform: scaleX(1);
+  visibility: visible;
+  transform-origin: left;
+  transition: .3s transform ease-in-out;
+}

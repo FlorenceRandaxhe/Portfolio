@@ -27,16 +27,9 @@ a {
   text-decoration: none;
 }
 
-.hidden {
-  position: absolute;
-  top: -9999px;
-  font-size: 0;
-  text-indent: -9999px;
-  line-height: 0;
-  padding: 0;
-  margin: 0;
-  border: 0;
-  letter-spacing: 0;
+img{
+  height: auto;
+  border-radius: 2px;
 }
 
 h1, h2, h3, h4, h5{
@@ -59,63 +52,16 @@ h1, h2, h3, h4, h5{
   }
 }
 
-img{
-  height: auto;
+.work_wrapper h2{
+  padding-bottom: 1em;
 }
 
 .wrapper, .page_title_wrapper{
+  @include wrapper(90em, 2, 0);
   margin: 2em auto 0;
   width: 90%;
   max-width:90em;
 }
-
-.btn{
-  font-family: $spacemono;
-  font-weight: 700;
-  font-size: 1em;
-  text-transform: uppercase;
-  background-color: $white;
-  border: 2px solid $black;
-  padding: 0.8em 2em;
-  box-shadow: 6px 6px $black;
-  transition: 0.2s;
-  &:hover, &:focus{
-    box-shadow: none;
-    transition: 0.2s;
-    background-color: $black;
-    color: $white;
-  }
-}
-
-.nav_link, .project_link_item, .about_link{
-  position: relative;
-  outline: none;
-}
-
-.nav_link:before, .project_link_item:before, .about_link:before{
-  display: block;
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: -3px;
-  left: -3px;
-  height: 0.625em;
-  z-index: -1;
-  background-color: $yellow;
-  transform: scaleX(0);
-  visibility: hidden;
-  transform-origin: right;
-  transition: .3s transform ease-in-out,visibility 0s .3s;
-}
-
-.nav_link:hover:before, .project_link_item:hover:before, .about_link:hover:before,
-.nav_link:focus:before, .project_link_item:focus:before, .about_link:focus:before{
-  transform: scaleX(1);
-  visibility: visible;
-  transform-origin: left;
-  transition: .3s transform ease-in-out;
-}
-
 .about, .contact{
   padding-top: 2em;
 }
@@ -126,7 +72,7 @@ img{
 
 @keyframes appear {
   0%{
-    transform: translateY(100px);
+    transform: translateY(50px);
     opacity: 0;
    }
   100%{

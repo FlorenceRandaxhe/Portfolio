@@ -1,22 +1,39 @@
-@import "reset/reset";
-@import "settings/setting";
+/**********  SETTINGS ************/
+@import "settings/colors";
+@import "settings/fonts";
+
+/*********** TOOLS *************/
+@import "tools/mixins";
+
+/*********** GENERIC *************/
+@import "generic/reset";
 @import "generic/generic";
-@import "component/logo";
-@import "component/svg_header";
-
-@import "component/header/header";
-@import "component/footer/footer";
-@import "component/home/work";
-@import "component/contact/contact";
-@import "component/about/about";
-@import "component/project/project";
-
 @import "generic/generic_res";
-@import "component/header/header_res";
+
+/*********** COMPONENTS *************/
+@import "component/header/header";
+@import "component/header/hero";
+@import "component/header/hero_res";
+@import "component/footer/footer";
+
+@import "component/home/work";
 @import "component/home/work_res";
+
+@import "component/contact/contact";
 @import "component/contact/contact_res";
+
+@import "component/about/about";
 @import "component/about/about_res";
+
+@import "component/project/project";
 @import "component/project/project_res";
+
+
+@import "component/svg_header";
+@import "component/logo";
+@import "component/nav";
+@import "component/nav_res";
+@import "component/btn";
 @import "component/error";
-
-
+/*********** UTILITIES *************/
+@import "utilities/sro";

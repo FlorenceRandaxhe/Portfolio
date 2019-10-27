@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Florence Randaxhe">
-    <meta name="description" content="<?= custom_description(); ?>">
+    <meta name="description" content="Florence Randaxhe | Web designer & developper">
     <meta name="keywords" content="<?php bloginfo('name'); ?>, <?php the_title(); ?>, Portfolio, web design, web designer, Projets web, site, design, web, website, logo">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><?php wp_title(''); ?></title>
-    <link rel="stylesheet" type="text/css" href="<?= asset_path('css/main.css'); ?>">
-    <link rel="icon" type="image/png" href="<?= asset_path('assets/icon.png'); ?>">
+    <link rel="stylesheet" type="text/css" href="<?= asset_path('/css/main.css'); ?>">
+    <link rel="icon" type="image/png" href="<?= asset_path('/assets/icon.png'); ?>">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <?php wp_head(); ?>
+
 </head>
 <body itemscope itemtype="http://schema.org/Person">
     <header class="header">
@@ -20,14 +23,70 @@
                         <h1 aria-level="1" role="heading"><p><span itemprop="name"><?php bloginfo('name'); ?></span><em itemprop="JobTitle"> Web designer</em></p></h1>
                     </div>
                     <div class="hero_scroll">
-                        <span class="scroll_down">Scroll</span>
+                        <a href="#work" class="scroll_down">Scroll</a>
                     </div>
                 </div>
             </div>
             <div class="svg_wrapper">
-                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1400 900">
-                    <g><g class="svg_fill"><line x1="1081.53" y1="102.21" x2="1039.53" y2="102.21"/><line x1="1060.53" y1="119.21" x2="1016.53" y2="119.21"/><line x1="922.89" y1="230.06" x2="907.13" y2="252.71"/><line x1="904.23" y1="233.88" x2="925.8" y2="248.89"/><circle cx="502.53" cy="224.21" r="25"/><polygon points="726.53 417.21 762.53 443.21 787.53 408.21 751.53 383.21 726.53 417.21" class="blop"/><polygon points="1302.53 16.21 1300.53 70.21 1348.53 44.21 1302.53 16.21"/><circle cx="1285.03" cy="239.71" r="9.5"/><polygon points="28.53 291.21 15.1 298.47 2.1 290.47 2.53 275.21 15.96 267.96 28.96 275.96 28.53 291.21" class="blop"/></g><g class="svg_stroke"><polygon points="1315.94 69.64 1363.39 43.84 1317.86 16.64 1315.94 69.64"/><line x1="923.89" y1="235.06" x2="908.13" y2="257.71"  /><line x1="905.23" y1="238.88" x2="926.8" y2="253.89" /><line x1="1261.89" y1="373.06" x2="1246.13" y2="395.71"/><line x1="1243.23" y1="376.88" x2="1264.8" y2="391.89" /><path d="M6.79,2,26.58,26.66c2.28,2.85-2.94,7-5.23,4.19L1.56,6.14C-.72,3.29,4.51-.9,6.79,2Z"/><circle cx="665.53" cy="26.21" r="9.5" id="el_0VAPa2Ne_8x" /><circle cx="365.03" cy="436.71" r="8" id="el_YWOsJe22sEg" /><line x1="1045.53" y1="107.71" x2="1085.53" y2="107.71" /><line x1="1021.53" y1="124.71" x2="1065.53" y2="124.71" /><line x1="1028.03" y1="408.71" x2="1078.03" y2="408.71" /><circle cx="494.03" cy="217.71" r="25.5" /><path d="M127.42,377.27l0,0a20.63,20.63,0,0,1-29.17-29.17l0,0-4.86-4.86,0,0a27.5,27.5,0,1,0,38.89,38.89l0,0Z"/></g></g>
+                <!------------------------- CENTER ------------------------------>
+                <!-- center cirles -->
+                <svg class="center_circles fixed_svg" version="1.1" xmlns="http://www.w3.org/2000/svg" width="60px" height="58px" viewBox="0 0 60 58">
+                    <circle class="svg_fill" cx="35" cy="33" r="25"/>
+                    <circle class="svg_stroke" cx="26.5" cy="26.5" r="25.5"/>
                 </svg>
+                <!-- center squares  -->
+                <svg class="center_squares fixed_svg" version="1.1" xmlns="http://www.w3.org/2000/svg" width="68px" height="62.5px" viewBox="0 0 68 62.5" >
+                    <polygon class="svg_fill" points="7,34.4 43,60.4 68,25.4 32,0.4 "/>
+                    <rect class="svg_stroke" x="10.4" y="9.3" transform="matrix(0.5751 -0.818 0.818 0.5751 -12.1958 39.026)"  width="42.1" height="43.9"/>
+                </svg>
+                <!-- center cirle -->
+                <svg class="center_circle fixed_svg" version="1.1" xmlns="http://www.w3.org/2000/svg" width="21px" height="21px" viewBox="0 0 21 21" >
+                    <circle class="svg_stroke" cx="10.5" cy="10.5" r="9.5"/>
+                </svg>
+                <!-- center cross -->
+                <svg class="center_cross fixed_svg" version="1.1" xmlns="http://www.w3.org/2000/svg" width="22.7px" height="23.8px" viewBox="0 0 22.7 23.8">
+                    <line class="svg_stroke" x1="19.2" y1="0.6" x2="3.5" y2="23.2"/>
+                    <line class="svg_stroke" x1="0.6" y1="4.4" x2="22.1" y2="19.4"/>
+                </svg>
+                <!------------------------- LEFT SIDE ------------------------------>
+                <!-- left cirle -->
+                <svg class="left_circle fixed_svg" version="1.1" xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 18 18">
+                    <circle class="svg_stroke" cx="9" cy="9" r="8"/>
+                </svg>
+                <!-- left half circle -->
+                <svg class="left_half_circle sticky_svg" version="1.1" xmlns="http://www.w3.org/2000/svg" width="49.5px" height="49.5px" viewBox="0 0 49.5 49.5">
+                    <path class="svg_stroke" d="M43.2,35.4L43.2,35.4C35,43.3,21.9,43.1,14,34.9c-7.7-8-7.7-20.6,0-28.6l0,0L9.2,1.4l0,0 C-1.6,12.1-1.7,29.5,8.9,40.3S37,51.2,47.8,40.6c0.1-0.1,0.2-0.2,0.3-0.3l0,0L43.2,35.4z"/>
+                </svg>
+                <!-- left tube -->
+                <svg class="left_tube sticky_svg" version="1.1" xmlns="http://www.w3.org/2000/svg" width="34.1px" height="38.8px" viewBox="0 0 28.1 32.8">
+                    <path class="svg_stroke" d="M6.8,2l19.8,24.7c2.3,2.9-2.9,7-5.2,4.2L1.6,6.1C-0.7,3.3,4.5-0.9,6.8,2z"/>
+                </svg>
+                <!-- left polygone -->
+                <svg class="left_polygone fixed_svg" version="1.1" xmlns="http://www.w3.org/2000/svg" width="26.9px" height="30.5px" viewBox="0 0 26.9 30.5">
+                    <polygon class="svg_fill" points="26.4,23.3 13,30.5 0,22.5 0.4,7.3 13.9,0 26.9,8 "/>
+                </svg>
+
+                <!------------------------- RIGHT SIDE ------------------------------>
+
+                <!-- right triangles -->
+                <svg class="right_triangles fixed_svg" version="1.1" xmlns="http://www.w3.org/2000/svg" width="64.9px" height="56.4px" viewBox="0 0 64.9 56.4">
+                    <polygon class="svg_fill" points="2,1.3 0,55.3 48,29.3 "/>
+                    <polygon class="svg_stroke" points="15.4,54.7 62.9,28.9 17.3,1.7 "/>
+                </svg>
+                <!-- right cross -->
+                <svg class="right_cross sticky_svg" version="1.1" xmlns="http://www.w3.org/2000/svg" width="22.7px" height="23.8px" viewBox="0 0 22.7 23.8">
+                    <line class="svg_stroke" x1="19.2" y1="0.6" x2="3.5" y2="23.2"/>
+                    <line class="svg_stroke" x1="0.6" y1="4.4" x2="22.1" y2="19.4"/>
+                </svg>
+                <!-- right circle -->
+                <svg class="right_circle sticky_svg" version="1.1" xmlns="http://www.w3.org/2000/svg" width="19px" height="19px" viewBox="0 0 19 19">
+                    <circle class="svg_fill" cx="9.5" cy="9.5" r="9.5"/>
+                </svg>
+
+
+
+
+
             </div>
         <?php else : endif; ?>
         <?php if ( !is_front_page() ): ?>
